@@ -26,8 +26,8 @@
 
     <licenses>
         <license>
-            <name>UPSTREAM_LICENSE_NAME</name>
-            <url>UPSTREAM_LICENSE_VERSION</url>
+            <name>MIT License</name>
+            <url>https://raw.githubusercontent.com/angular-ui/ui-ace/master/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -90,10 +90,12 @@
                         <configuration>
                             <target>
                                 <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}/angular-ui-ace-${upstream.version}" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/angular-ui-ace-${upstream.version}" />
+                                    <fileset dir="${project.build.directory}/ui-ace-${upstream.version}">
+                                    	<include name="*.js" />
+                                    </fileset>
                                 </move>
                             </target>
                         </configuration>
