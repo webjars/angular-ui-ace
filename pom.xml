@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>angular-ui-ace</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.1.1</version>
     <name>angular-ui-ace</name>
     <description>WebJar for Angulac UI Ace</description>
     <url>http://webjars.org</url>
@@ -36,7 +36,7 @@
         <url>http://github.com/webjars/angular-ui-ace</url>
         <connection>scm:git:https://github.com/webjars/angular-ui-ace.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/angular-ui-ace.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>angular-ui-ace-0.1.1</tag>
     </scm>
     
     <dependencies>
