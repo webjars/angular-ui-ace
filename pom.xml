@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>angular-ui-ace</artifactId>
-    <version>0.1.2-SNAPSHOT</version>
+    <version>0.1.1-1</version>
     <name>angular-ui-ace</name>
     <description>WebJar for Angulac UI Ace</description>
     <url>http://webjars.org</url>
@@ -43,12 +43,12 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>angularjs</artifactId>
-            <version>1.2.15</version>
+            <version>1.3.0</version>
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>ace</artifactId>
-            <version>07.31.2013</version>
+            <version>1.1.7-1</version>
         </dependency>
     </dependencies>
     
@@ -57,6 +57,18 @@
         <upstream.version>0.1.1</upstream.version>
         <upstream.url>https://github.com/angular-ui/ui-ace/archive</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
+        <requirejs>
+            {
+                "paths": {
+                    "angular-ui-ace": "ui-ace"
+                },
+                "shim": {
+                    "angular-ui-ace": {
+                        "deps": ["angular", "ace"]
+                    }
+                }
+            }
+        </requirejs>
     </properties>
 
     <build>
