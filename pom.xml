@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>angular-ui-ace</artifactId>
-    <version>0.1.1-2-SNAPSHOT</version>
+    <version>0.2.3-SNAPSHOT</version>
     <name>angular-ui-ace</name>
     <description>WebJar for Angulac UI Ace</description>
     <url>http://webjars.org</url>
@@ -54,7 +54,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>0.1.1</upstream.version>
+        <upstream.version>0.2.3</upstream.version>
         <upstream.url>https://github.com/angular-ui/ui-ace/archive</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
         <requirejs>
@@ -101,12 +101,12 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
-                                <echo message="moving resources" />
+                                <echo message="unzip archive"/>
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
+                                <echo message="moving resources"/>
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}/ui-ace-${upstream.version}">
-                                    	<include name="*.js" />
+                                        <include name="*.js"/>
                                     </fileset>
                                 </move>
                             </target>
@@ -118,13 +118,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.5.1</version>
             </plugin>
 
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.5.1</version>
+                <version>1.6.5</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>sonatype-nexus-staging</serverId>
